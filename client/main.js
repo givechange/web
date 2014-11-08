@@ -1,8 +1,3 @@
-Users = new Mongo.Collection("users")
-Restaurants = new Mongo.Collection("restaurants")
-Donations = new Mongo.Collection("donations")
-Redemptions = new Mongo.Collection("redemptions")
-
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
