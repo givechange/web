@@ -27,8 +27,9 @@ Template.newUser.events({
 
     Meteor.call('userInsert', user, function(error, result) {
       if (error) return throwError(error.reason);
+      console.log("Saved user, id: " + result._id);
   
-      Router.go('userPage', {_id: result._id});
+      Router.go('userPage', {id: result._id});
     });
   }
 });
