@@ -19,6 +19,21 @@ if (Meteor.isClient) {
       Session.set("counter", Session.get("counter") + 1);
     }
   });
+
+  Template.body.helpers({
+    users: function() {
+      return Users.find({});
+    },
+    restaurants: function() {
+      return Restaurants.find({});
+    },
+    donations: function() {
+      return Donations.find({});
+    },
+    redemptions: function() {
+      return Redemptions.find({});
+    }
+  });
 }
 
 if (Meteor.isServer) {
