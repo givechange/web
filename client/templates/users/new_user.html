@@ -1,7 +1,21 @@
 <template name="newUser">
   <h1>New User</h1>
 
-  <form class="new-user">
-    <input type="text" name="name" placeholder="Full Name" />
+  <form class="new-user main form">
+    <div class="form-group {{errorClass 'name'}}">
+      <label class="control-label" for="name">Full Name</label>
+      <div class="controls">
+        <input type="text" name="name" placeholder="Full Name" />
+        <span class="help-block">{{errorMessage 'name'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'photo'}}">
+      <label class="control-label" for="photo">Your Photo</label>
+      <div class="controls">
+        <input type="file" name="photo" placeholder="Your Photo" />
+        <span class="help-block">{{errorMessage 'photo'}}</span>
+      </div>
+    </div>
+    <input type="submit" value="Sign Up" class="btn btn-primary" />
   </form>
 </template>
