@@ -1,10 +1,17 @@
 <template name="layout">
-  <div class="container">
-    <header class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">getCHANGE</a>
-       </div>
-    </header>
+    <nav role="navigation" class="navbar-fixed-top">
+      <div class="container">
+        <div class="title-bar">
+          <ul class="nav navbar-nav pull-right">
+            <li class="navItem"><a href="/scan" class="scan"></a></li>
+          </ul>
+          <a href="/" class="logo">give<strong>Change</strong></a>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container main">
     <div id="main" class="row-fluid">
       {{> yield}}
     </div>
