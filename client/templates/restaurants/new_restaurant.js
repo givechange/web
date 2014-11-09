@@ -15,20 +15,21 @@ Template.newRestaurant.events({
   'submit form': function(e) {
     e.preventDefault();
 
-    var Restaurant = {
+    var restaurant = {
       name: $(e.target).find('[name=name]').val(),
       address : $(e.target).find('[name=address]').val()
     };
 
     var errors = validateRestaurant(restaurant);
-    if (errors.name || errors.photo) {
+    if (errors.name || errors.address) {
       return Session.set('newRestaurantErrors', errors);
     }
 
     Meteor.call('restaurantInsert', restaurant, function(error, result) {
-      if (error) return throwError(error.reason);
+      console.log(result)
+      // if (error) return throwError(error.reason);
   
-      Router.go('restaurantPage', {_id: result._id});
+      Router.go('/restaurants/' + result);
     });
   }
 });
