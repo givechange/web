@@ -9,6 +9,14 @@ Template.scan.events({
         $("#testh2").show();
         $("#yourimage").show();
         $("#result").text(data);
+
+        var url = data
+          .split('/')
+          .slice(-2)
+          .join('/')
+        ;
+
+        Router.go('/' + url);
       };
       qrcode.decode(this._url);
     }
