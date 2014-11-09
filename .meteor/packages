@@ -10,4 +10,5 @@ iron:router
 mizzao:bootstrap-3
 underscore
 mrgalaxy:stripe
+mrt:qr-scanner
 
