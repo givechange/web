@@ -1,5 +1,5 @@
 <template name="upload">
-    {{> qrScanner}}
-    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
-    <button>Scan</button>
+    <img id="yourimage">
+    <h2>Decoded QR Code:</h2><h2 id="result"></h2>
+    <input type="file" capture="camera" accept="image/*" id="camera-input" name="cameraInput">
 </template>

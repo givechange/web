@@ -1,12 +1,14 @@
 Template.upload.events({
-  'click button': function(e) {
-  	console.log(qrScanner)
-    var msg = qrScanner.message();
-
-    if (_.isUndefined(msg)) {
-        return;
+  'change #camera-input': function(e) {
+    if (e.target.files.length == 1 && e.target.files[0].type.indexOf("image/") == 0) {
+      this._url = URL.createObjectURL(e.target.files[0]);
+      $("#yourimage").attr("src", this._url);
     }
-
-    console.log(msg);
+    if (this._url) {
+      qrcode.callback = function (data) {
+        $("#result").text(data);
+      };
+      qrcode.decode(this._url);
+    }
   }
 });

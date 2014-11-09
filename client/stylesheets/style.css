@@ -10,3 +10,7 @@
   float: left;
   padding: 8px;
 }
+
+#yourimage {
+  max-height: 200px;
+}
