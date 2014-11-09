@@ -1,11 +1,18 @@
 <template name="scan">
-
-    <div class="scan-container">
-    	<img style="display:none" id="yourimage">
-    	<div id="testh2" style="display:none"><p>Decoded QR Code: <strong><span id="result"></span></strong></p></div>
-    	<div id="scan-btn" class="fileUpload btn btn-primary btn-lg">
-    	    <span>Scan QR Code</span>
-    	    <input class="upload" type="file" capture="camera" accept="image/*" id="camera-input" name="cameraInput">
-    	</div>
-    </div>
+	<div class="container scan-copy">
+		<h2 class="subheader">Making personal donations simple, easy, and safe.</h2>
+		<div class="scan-container">
+			<img style="display:none" id="yourimage">
+			<div id="testh2" style="display:none"><p>Decoded QR Code: <strong><span id="result"></span></strong></p></div>
+			<div id="scan-btn" class="fileUpload btn btn-primary btn-lg">
+			    <span>Scan QR Code</span>
+			    <input class="upload" type="file" capture="camera" accept="image/*" id="camera-input" name="cameraInput">
+			</div>
+		</div>
+		<p>give<strong>Change</strong> allows you to instantly credit a user's account at a local restaurant or shelter. To get started, simply scan their QR code.</p>
+		<img class="steps" src="/step1.jpg" alt="step1">
+		<p>You'll get to know who you're donating to and where your money is going.</p>
+		<img class="steps" src="/step2.jpg" alt="step2">
+		<p>We also want to help the entire community, that's why we've given you the ability to donate to a local charity as well.</p>
+	</div>
 </template>
