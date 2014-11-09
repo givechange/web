@@ -44,6 +44,7 @@ mobile-status-bar@1.0.1
 mongo@1.0.8
 mrgalaxy:stripe@1.5.6
 mrt:qr-scanner@0.2.0
+mrt:qrcodesvg@0.1.0
 observe-sequence@1.0.3
 ordered-dict@1.0.1
 random@1.0.1
