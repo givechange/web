@@ -177,7 +177,6 @@ qrcode.process = function(ctx){
     
     var end = new Date().getTime();
     var time = end - start;
-    console.log(time);
     
     return qrcode.decode_utf8(str);
     //alert("Time:" + time + " Code: "+str);
