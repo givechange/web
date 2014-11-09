@@ -18,5 +18,5 @@ Template.userItem.rendered = function() {
 }
 
 function _getUrl(id) {
-  return "http://localhost:3000/donate/" + id;
+  return "http://givechange.meteor.com/donate/" + id;
 }
