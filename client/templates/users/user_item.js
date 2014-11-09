@@ -3,10 +3,10 @@ Template.userItem.helpers({
     return this._id;
   },
   balance: function() {
-    var last = Donations.find({userId: this._id}, {sort: {timestamp: -1}, $limit: 1}).fetch();
+    var last = Donations.find({userId: this._id}, {sort: {timestamp: -1}, limit: 1}).fetch();
     if (last.length == 0) return 0;
     console.log(last);
-    return last.balance;
+    return last[0].balance;
   },
   url: function() {
     if (this._id == undefined) return "";
