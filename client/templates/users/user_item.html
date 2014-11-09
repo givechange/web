@@ -2,7 +2,13 @@
   <div class="user">
     <div class="user-content">
       <h3>{{name}}</h3>
-      <img src="{{photo}}"/>
+      <img class="photo" src="{{photo}}"/>
+      <div id="qrcode" class="qr" ></div>
+          
+      <script type="text/javascript">
+var qrcodesvg   = new Qrcodesvg( "http://localhost:3000/donate{{_id}}", "qrcode", 250);
+        qrcodesvg.draw();
+      </script>
     </div>
   </div>
 </template>

@@ -1,1 +1,12 @@
 /* CSS declarations go here */
+
+.photo {
+  max-width: 250px;
+  padding: 8px;
+}
+
+.qr {
+  max-width: 250px;
+  float: left;
+  padding: 8px;
+}
