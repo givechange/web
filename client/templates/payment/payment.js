@@ -1,6 +1,7 @@
 Template.payment.events({
     'click button': function(e) {
         e.preventDefault();
+        console.log(e);
         StripeCheckout.open({
             key: 'pk_test_anR5YIoK80nL7qqTzkcCEyAv',
             amount: 5000,
