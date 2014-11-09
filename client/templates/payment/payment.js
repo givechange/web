@@ -35,7 +35,7 @@ Template.payment.events({
                     if (error) return throwError(error.reason);
                     console.log("Saved donation: " + result);
   
-                    Router.go('/thank_you');
+                    Router.go('/thanks');
                   });
               });
             }
