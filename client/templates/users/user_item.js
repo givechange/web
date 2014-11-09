@@ -9,10 +9,12 @@ Template.userItem.helpers({
 });
 
 Template.userItem.rendered = function() {
-  console.log(this);
-  var url = _getUrl(this.data._id);
-  var qrcodesvg   = new Qrcodesvg( url, "qrcode", 250);
-  qrcodesvg.draw();
+  if (this.data != undefined) {
+    console.log(this);
+    var url = _getUrl(this.data._id);
+    var qrcodesvg   = new Qrcodesvg( url, "qrcode", 250);
+    qrcodesvg.draw();
+  }
 }
 
 function _getUrl(id) {
