@@ -119,3 +119,8 @@ body {
 .scan-copy p {
 	margin: 30px 0;
 }
+
+.balance {
+  float: right;
+  margin-top: 10px;
+}
