@@ -3,12 +3,18 @@ Template.userItem.helpers({
     return this._id;
   },
   url: function() {
-    if (this._id == undefined) return "";
-    console.log(this._id);
-
-    var url = "http://localhost:3000/donate/" + this._id;
-    var qrcodesvg   = new Qrcodesvg( url, "qrcode", 250);
-    qrcodesvg.draw();
+    var url = _getUrl(this._id);
     return url;
   }
 });
+
+Template.userItem.rendered = function() {
+  console.log(this);
+  var url = _getUrl(this.data._id);
+  var qrcodesvg   = new Qrcodesvg( url, "qrcode", 250);
+  qrcodesvg.draw();
+}
+
+function _getUrl(id) {
+  return "http://localhost:3000/donate/" + id;
+}
