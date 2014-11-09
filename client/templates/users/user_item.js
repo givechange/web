@@ -2,11 +2,12 @@ Template.userItem.helpers({
   id: function() {
     return this._id;
   },
-  balance: function() {
-    var last = Donations.find({userId: this._id}, {sort: {timestamp: -1}, limit: 1}).fetch();
+  my_balance: function() {
+    console.log("Looking up balance for "+this._id);
+    var last = Donations.find({user_id: this._id}, {sort: {timestamp: -1}, limit: 1}).fetch();
     if (last.length == 0) return 0;
-    console.log(last);
-    return last[0].balance;
+    console.log(last[0].balance);
+    return String(last[0].balance);
   },
   url: function() {
     if (this._id == undefined) return "";
