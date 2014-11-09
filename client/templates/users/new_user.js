@@ -20,6 +20,7 @@ Template.newUser.events({
 
     var user = {
       name: $(e.target).find('[name=name]').val(),
+      bio: $(e.target).find('[name=bio]').val(),
       photo: $(e.target).find('[name=photo]').val()
     };
 

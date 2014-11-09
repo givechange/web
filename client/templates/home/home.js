@@ -1,0 +1,2 @@
+Template.payment.events({
+  });
