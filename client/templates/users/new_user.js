@@ -12,8 +12,11 @@ Template.newUser.helpers({
 });
 
 Template.newUser.events({
-  'submit form': function(e) {
+  'submit form': function(e, template) {
     e.preventDefault();
+
+    var file = template.find('#fileinput').files[0];
+    var reader = new FileReader();
 
     var user = {
       name: $(e.target).find('[name=name]').val(),
@@ -25,11 +28,15 @@ Template.newUser.events({
       return Session.set('newUserErrors', errors);
     }
 
-    Meteor.call('userInsert', user, function(error, result) {
-      if (error) return throwError(error.reason);
-      console.log("Saved user, id: " + result._id);
+    reader.onload = function(e) {
+      user.photo = e.target.result;
+      Meteor.call('userInsert', user, function(error, result) {
+        if (error) return throwError(error.reason);
+        console.log("Saved user, id: " + result);
   
-      Router.go('userPage', {id: result._id});
-    });
+        Router.go('/user/' + result);
+      });
+    }
+    reader.readAsDataURL(file);
   }
 });
