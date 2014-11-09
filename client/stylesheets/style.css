@@ -108,3 +108,78 @@ body {
 	margin-bottom: 20px;
 	display: inline-block;
 }
+
+.user {
+  font-weight: 100;
+  text-align: center;
+}
+
+.user > * {
+  margin: 10px 0;
+}
+
+.user .name {
+  font-weight: bold;
+}
+
+.user .bio {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.user .message {
+  background: #3498db;
+  color: #FFF;
+  padding: 10px;
+}
+
+.user .message p {
+  width: 150px;
+  display: inline-block;
+}
+
+.user .message em {
+  background: #3498db;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.user .question {
+}
+
+.amount {
+  text-align: center;
+}
+
+.amount button {
+  background: #3498db;
+  border: none;
+  border-radius: 50%;
+  color: #FFF;
+  width: 66px;
+  height: 66px;
+}
+
+button:hover {
+  background: #CCC;
+}
+
+.circle {
+  line-height: 0;
+  display: inline-flex;
+  border: 5px solid #3498db;
+  border-radius: 50%;
+  transition: linear 0.25s;
+  height: 125px;
+  width: 125px;
+}
+
+.circle img {
+  border-radius: 50%;
+}
+
+.circle .photo {
+  max-width: 125px;
+  max-height: 125px;
+}

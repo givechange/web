@@ -1,6 +1,18 @@
 <template name="payment">
+  <div class="user">
+    <div class="circle">
+      <img class="photo" src="{{photo}}"/>
+    </div>
+    <p class="user-name"><strong>{{name}}</strong></p>
+    <p class="bio"><strong>{{bio}}</strong></p>
+    <div class="message">
+      <p>Your donation will go directly to {{name}}'s account at <em>Save On Meats</em></p>
+    </div>
+  </div>
+  <p class="question">How much would you like to give?</p>
+  <div class="amount">
     <button x-amt="5">$5</button>
     <button x-amt="10">$10</button>
     <button x-amt="20">$20</button>
-    {{> userItem}}
+  </div>
 </template>
