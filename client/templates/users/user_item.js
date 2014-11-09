@@ -20,5 +20,5 @@ Template.userItem.helpers({
 });
 
 function _getUrl(id) {
-  return "http://givechange.meteor.com/donate/" + id;
+  return "/donate/" + id;
 }
