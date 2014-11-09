@@ -200,3 +200,8 @@ button:hover {
   max-width: 125px;
   max-height: 125px;
 }
+
+.balance {
+  float: right;
+  margin-top: 10px;
+}
