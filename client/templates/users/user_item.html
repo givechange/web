@@ -1,12 +1,12 @@
 <template name="userItem">
   <div class="user">
     <div class="user-content">
-      <p>Balance: <strong>${{balance}}</strong></p>
+      <!--<p>Balance: <strong>${{balance}}</strong></p>-->
       <div class="circle">
         <img class="photo" src="{{photo}}"/>
       </div>
       <p class="user-name"><strong>{{name}}</strong></p>
-      <p class="bio"><strong>{{bio}}</strong></p>
+      <p class="bio"><strong>&quot;{{bio}}&quot;</strong></p>
       <p>Donation Link: <a id="donatelink" href="{{url}}">{{url}}</a></p>
       <p>QR Code:</p>
       <div id="qrcode" class="qr" >{{qr}}</div>

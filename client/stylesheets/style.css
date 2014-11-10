@@ -159,6 +159,11 @@ body {
 	text-align: center;
 }
 
+.user-content {
+	clear: both;
+	width: 100%;
+}
+
 .question {
 	text-align: center;
 }
